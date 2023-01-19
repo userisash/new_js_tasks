@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.2 EXTRA</title>
+</head>
+<body>
+    <script>
+       let object1 = {name: "John Smith"};
+       let object2 = {name: "Jane Doe"};
+       let object3 = {name: "Bob Ross"};
+
+       let map = new Map();
+       map.set(object1, 1);
+       map.set(object2, 2);
+       map.set(object3, 3);
+
+        for (let [key, value] of map) {
+        console.log("Name: " + key.name + ", ID: " + value);
+        }
+
+    </script>
+</body>
+</html>
