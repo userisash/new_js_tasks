@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.2 EXTRA</title>
+</head>
+<body>
+    <script>
+        let object = {};
+        let map = new Map();
+
+        console.time("Object");
+        for (let i = 0; i < 1000000; i++) {
+        object[i] = i;
+        }
+        console.timeEnd("Object");
+
+        console.time("Map");
+        for (let i = 0; i < 1000000; i++) {
+        map.set(i, i);
+        }
+        console.timeEnd("Map");
+
+        // results for adding values and keys
+        // Object: 31.393798828125 ms
+        //  Map: 138.118896484375 ms
+
+       
+        for (let i = 0; i < 1000000; i++) {
+        object[i] = i;
+        map.set(i, i);
+        }
+
+        console.time("Object");
+        let prop = object[999999];
+        console.timeEnd("Object");
+
+        console.time("Map");
+        prop = map.get(999999);
+        console.timeEnd("Map");
+
+        // results for finding a property
+        // Object: 0.010009765625 ms
+        // Map: 0.0087890625 ms
+
+        console.time("Object");
+        object[1000000] = 1000000;
+        console.timeEnd("Object");
+
+        console.time("Map");
+        map.set(1000000, 1000000);
+        console.timeEnd("Map");
+
+        // results for finding a single entry
+        // Object: 0.006103515625 ms
+        // Map: 0.002197265625 ms
+
+        console.time("Object");
+        delete object[1000000];
+        console.timeEnd("Object");
+
+        console.time("Map");
+        map.delete(1000000);
+        console.timeEnd("Map");
+
+        // results for deleting a single entry
+        // Object: 0.014892578125 ms
+        //  Map: 0.0029296875 ms
+
+
+    </script>
+</body>
+</html>
