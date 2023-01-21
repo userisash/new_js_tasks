@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week end task 3.1</title>
+</head>
+<body>
+    <script>
+    function nbYear(p0, percent, aug, p) {
+    let i = 0;
+    while (true) {
+    if (p0 >= p) {return i;}
+    p0 = p0 * (1 + percent/100) + aug; i++;
+    }
+    }
+    console.log(nbYear(1000, 2, 50, 1200));
+    </script>
+</body>
+</html>

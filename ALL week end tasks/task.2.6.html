@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week end task 2.6</title>
+</head>
+<body>
+    <script>
+        const centuryFromYear = year => {
+        if(typeof year === 'string'){
+        if(year.toString().slice(-2) === '00'){
+         return year.toString().slice(0,2);
+        }else{
+         return (Math.floor(+year/100) +1).toString();
+        };
+        }else if(typeof year == 'number'){
+        return Math.floor((year-1)/100) + 1;
+        }else{
+        return undefined;
+        };
+        };
+    </script>
+</body>
+</html>

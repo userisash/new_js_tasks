@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week end task 5.4</title>
+</head>
+<body>
+    <script>
+        let str = 'the stealth warrior';
+        const ToWeiredCase = (str) => str.split('')
+        .map((a,i) => i & 1 ? a.toUpperCase() : a.toLowerCase()).join('');
+        console.log(ToWeiredCase(str));
+    </script>
+</body>
+</html>

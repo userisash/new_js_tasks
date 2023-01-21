@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week end task 5.5</title>
+</head>
+<body>
+    <script>
+        function initials(name){
+         let array= name.split(' ')
+        let result =[];
+        for(let i=0; i< array.length; i++){
+        let element = array[i];
+        result.push(element[0]);
+        }
+        return result.join('.')
+        }
+        console.log(initials('Sam Harris'));
+    </script>
+</body>
+</html>

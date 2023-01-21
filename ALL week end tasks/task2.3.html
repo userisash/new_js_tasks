@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week end task 2.3</title>
+</head>
+<body>
+    <script>
+
+        function findNextSquare(n){
+        let r;
+        let nextr;
+        if(Math.sqrt(n)%1 ===0){
+         r = Math.sqrt(n)
+         nextr = r+1
+        }else{
+        return -1;
+        }
+        return nextr*nextr;
+        }
+        console.log(findNextSquare(121)); 
+        
+    </script>
+</body>
+</html>
